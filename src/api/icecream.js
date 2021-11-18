@@ -21,3 +21,11 @@ export const getIcecreamFetch = () => {
       return data;
     });
 };
+
+
+export const createIcecream =  async (params)=>{
+  const endpoint="/icecream/create"
+  const icecream = await axios.post(`${API_URL}${endpoint}`, params)
+  console.log("respuesta del post", icecream)
+
+}
